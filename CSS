@@ -1,0 +1,107 @@
+/* General Styles */
+/* Dark Mode Background */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #222;  /* Dark background */
+    color: white;
+    margin: 0;
+}
+
+/* Product Container */
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    background: #333;  /* Dark card background */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    max-width: 800px;
+    width: 90%;
+}
+
+/* Product Images */
+.product-images {
+    flex: 1;
+    min-width: 250px;
+    text-align: center;
+}
+
+#main-image {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* Image Thumbnails */
+.image-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.thumbnail {
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: transform 0.2s, opacity 0.3s;
+}
+
+.thumbnail:hover {
+    transform: scale(1.1);
+    opacity: 0.8;
+}
+
+/* Product Info */
+.product-info {
+    flex: 1;
+    min-width: 250px;
+    padding: 20px;
+}
+
+.price {
+    font-size: 22px;
+    color: #4caf50;  /* Green price text */
+    font-weight: bold;
+}
+
+/* Dark Mode Button Styles */
+button {
+    background-color: #ff6600;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 5px;
+    width: 100%;
+    transition: background 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #cc5500;
+    transform: scale(1.05);
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 600px) {
+    .product-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .image-gallery {
+        flex-wrap: wrap;
+    }
+
+    .thumbnail {
+        width: 50px;
+        height: 50px;
+    }
+}
