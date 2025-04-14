@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="product-container">
+        <div class="product-images">
+            <img id="main-image" src="image1.jpg" alt="Product">
+            <div class="image-gallery">
+                <img class="thumbnail" src="image1.jpg" onclick="changeImage('image1.jpg')">
+                <img class="thumbnail" src="image2.jpg" onclick="changeImage('image2.jpg')">
+                <img class="thumbnail" src="image3.jpg" onclick="changeImage('image3.jpg')">
+            </div>
+        </div>
+
+        <div class="product-info">
+            <h2>Nike Air Max 2024</h2>
+            <p class="price">$120</p>
+            <label for="size">Size:</label>
+            <select id="size" onchange="updatePrice()">
+                <option value="120">Small - $120</option>
+                <option value="130">Medium - $130</option>
+                <option value="140">Large - $140</option>
+            </select>
+            <button onclick="addToCart()">Add to Cart</button>
+            <p id="cart-message"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
